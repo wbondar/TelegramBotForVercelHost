@@ -2,15 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "main.py",
-      "use": "@vercel/python",
-      "config": { "runtime": "python3.11" }
+      "src": "api/telegram.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/api/telegram",
-      "dest": "main.py"
+      "dest": "api/telegram.py"
     }
   ]
 }
