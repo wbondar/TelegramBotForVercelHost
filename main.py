@@ -1,4 +1,4 @@
-from telegram import Update
+from telegram import Update #///
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
 import os  # Добавляем импорт модуля os
 
