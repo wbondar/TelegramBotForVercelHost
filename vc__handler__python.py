@@ -1,6 +1,6 @@
 import main
 from quart import Quart, request, Response
-import os  # Добавляем импорт модуля os
+import os
 
 app = Quart(__name__)
 
