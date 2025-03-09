@@ -1,4 +1,4 @@
-import os
+import os #система
 import random as rand
 import time  # schedule убираем, он не нужен с вебхуками
 from telegram import Update, WebhookInfo, Bot
