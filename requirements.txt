@@ -1,5 +1,3 @@
 python-telegram-bot>=20.8
-selenium==4.18.1
 python-dotenv
-aiohttp
-asyncio # Добавляем asyncio
+quart
