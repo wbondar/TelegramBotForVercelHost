@@ -1,16 +1,19 @@
-import main
+# api/telegram.py
 from quart import Quart, request, Response
-import os
+# import main  # УДАЛИТЕ ЭТУ СТРОКУ!
 
 app = Quart(__name__)
 
-@app.route('/api/telegram', methods=['POST'])
+@app.route('/', methods=['POST'])  # ИЗМЕНИТЕ МАРШРУТ НА КОРНЕВОЙ!
 async def handler():
     try:
-        update = main.Update.de_json(await request.get_json(force=True), main.application.bot)
-        await main.application.update_queue.put(update)
-        await main.application.process_update(main.application.update_queue.get_nowait())
-        return Response(status=200)
+        # Замените этот код на ваш код обработки обновления Telegram.
+        # Вам НЕ нужен main.Update.de_json и т.д., потому что main здесь нет!
+        # Получайте данные из request.get_json() напрямую.
+        data = await request.get_json(force=True)
+        # print(data)  # Раскомментируйте для отладки, чтобы увидеть, что приходит от Telegram
+        # ... ваш код обработки data ...
+        return Response(status=200)  # Отправьте успешный ответ
     except Exception:
         import traceback
         traceback.print_exc()
